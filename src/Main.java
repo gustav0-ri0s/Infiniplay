@@ -40,7 +40,7 @@ public class Main {
         System.out.println(miPodcast);
 
         // 5. Mostrar información del podcast
-        System.out.println("\n=== Información del Podcast ===");
+        System.out.println("\n==== Información del Podcast ===");
         System.out.println(miPodcast);
         System.out.println("Presentador: " + miPodcast.getPresentador());
         System.out.println("Invitados: " + miPodcast.getInvitados());
