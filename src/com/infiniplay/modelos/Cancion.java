@@ -6,6 +6,15 @@ public class Cancion extends Audio{
     private String genero;
     private int anioLanzamiento;
 
+    @Override
+    public int getClasificacion() {
+        if (getMeGusta()>5000){
+           return 8;
+        } else {
+            return 4;
+        }
+    }
+
     public Cancion (String titulo, int duracion, String artista, String album, String genero, int anioLanzamiento){
         super(titulo,duracion);
         this.artista = artista;

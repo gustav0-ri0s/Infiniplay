@@ -11,7 +11,16 @@ public class Podcast extends Audio {
     private int episodio;
     private int temporada;
 
-    public Podcast(String titulo, int duracion, String presentador, List<String>invitados, int temporada,int episodio) {
+    @Override
+    public int getClasificacion() {
+        if (getTotalDeReproducciones() > 200){
+            return 9;
+        } else {
+            return 2;
+        }
+    }
+
+    public Podcast(String titulo, int duracion, String presentador, List<String>invitados, int temporada, int episodio) {
         super(titulo, duracion);
         this.presentador = presentador;
         this.invitados = new ArrayList<>(invitados);

@@ -1,4 +1,5 @@
 import com.infiniplay.modelos.Cancion;
+import com.infiniplay.modelos.MisFavoritos;
 import com.infiniplay.modelos.Podcast;
 
 import java.util.ArrayList;
@@ -34,8 +35,22 @@ public class Main {
         );
 
         miPodcast.agregarInvitado("Luis Martinez");
-        miPodcast.reproducir();
-        miPodcast.reproducir();
+        for (int i = 0; i < 100; i++) {
+            miPodcast.reproducir();
+        }
+
+        for (int i = 0; i < 2500; i++) {
+            miPodcast.meGusta();
+        }
+
+        for (int i = 0; i < 200; i++) {
+            cancion.reproducir();
+        }
+
+        for (int i = 0; i < 15000; i++) {
+            cancion.meGusta();
+        }
+
 
         System.out.println(miPodcast);
 
@@ -45,15 +60,13 @@ public class Main {
         System.out.println("Presentador: " + miPodcast.getPresentador());
         System.out.println("Invitados: " + miPodcast.getInvitados());
         System.out.println("Temporada: " + miPodcast.getTemporada());
-        System.out.println("Episodio: " + miPodcast.getEpisodio());
-        System.out.println("Reproducciones: " + miPodcast.getTotalDeReproducciones());
+        System.out.println("Episodio : #" + miPodcast.getEpisodio());
+        System.out.println("Total de reproducciones: " + miPodcast.getTotalDeReproducciones());
+        System.out.println("Total de me gusta: "+miPodcast.getMeGusta());
 
-
-
-
-
-
-
+        MisFavoritos favoritos = new MisFavoritos();
+        favoritos.adiciona(miPodcast);
+        favoritos.adiciona(cancion);
 
     }
 
